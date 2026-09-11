@@ -1,0 +1,19 @@
+import os
+import yaml
+from datetime import datetime, timezone
+from dotenv import load_dotenv
+
+load_dotenv()
+
+def load_config(path="config/config.yaml"):
+    with open(path) as f:
+        return yaml.safe_load(f)
+
+def get_env(key):
+    val = os.environ.get(key)
+    if not val:
+        raise EnvironmentError(f"Missing: {key}")
+    return val
+
+def today_partition():
+    return datetime.now(timezone.utc).strftime("%Y/%m/%d")
