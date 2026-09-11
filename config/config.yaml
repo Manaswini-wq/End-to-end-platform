@@ -1,0 +1,30 @@
+gcp:
+  project_id: "your-gcp-project-id"
+  region: "us-central1"
+  data_lake_bucket: "your-project-id-data-lake"
+
+sources:
+  weather_api:
+    base_url: "https://api.open-meteo.com/v1/forecast"
+    cities:
+      - { name: "New York", lat: 40.71, lon: -74.01 }
+      - { name: "Chicago", lat: 41.88, lon: -87.63 }
+      - { name: "Los Angeles", lat: 34.05, lon: -118.24 }
+      - { name: "Houston", lat: 29.76, lon: -95.37 }
+      - { name: "Miami", lat: 25.76, lon: -80.19 }
+  postgres:
+    host: "localhost"
+    port: 5432
+    database: "retail_db"
+    schema: "public"
+  csv:
+    sales_path: "sample_data/sales.csv"
+    stores_path: "sample_data/stores.csv"
+
+bigquery:
+  raw_dataset: "retail_raw"
+  analytics_dataset: "retail_analytics"
+
+data_lake:
+  raw_prefix: "raw"
+  processed_prefix: "processed"
