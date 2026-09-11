@@ -1,0 +1,12 @@
+apache-airflow==2.8.4
+dbt-bigquery==1.7.7
+great-expectations==0.18.12
+google-cloud-bigquery==3.20.1
+google-cloud-storage==2.16.0
+pandas==2.2.1
+requests==2.31.0
+psycopg2-binary==2.9.9
+sqlfluff==3.0.3
+pytest==8.1.1
+python-dotenv==1.0.1
+pyyaml==6.0.1
