@@ -1,0 +1,19 @@
+select
+    transaction_id,
+    transaction_date,
+    store_id,
+    product_id,
+    customer_id,
+    quantity,
+    unit_price,
+    discount_pct,
+    gross_amount,
+    net_amount,
+    cost_of_goods,
+    profit,
+    payment_method,
+    category,
+    brand,
+    region,
+    weather_condition
+from {{ ref('int_sales_enriched') }}
