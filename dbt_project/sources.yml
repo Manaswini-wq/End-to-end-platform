@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: retail_raw
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: retail_raw
+    tables:
+      - name: raw_sales
+      - name: raw_stores
+      - name: raw_products
+      - name: raw_inventory
+      - name: raw_weather
