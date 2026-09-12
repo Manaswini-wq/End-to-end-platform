@@ -1,0 +1,8 @@
+name: "retail_analytics"
+version: "1.0.0"
+profile: "retail"
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
